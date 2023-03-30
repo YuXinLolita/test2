@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>前端面试</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="name">姓名：</div>
+  <div id="age">age</div>
+  <div id="sex">sex:
+  </div>
+  <h1>乱花渐欲迷人眼，浅草才能没马蹄</h1>
+</body>
+<script>
+  //深克隆与浅克隆
+  let obj = {
+    name: '小心',
+    age: 18,
+    sex: 'man',
+    hobby: ['看书', '看电影']
+  }
+  let obj2 = {}
+  function clone(target, oragin) {
+    target = target || {}
+    for (let key in oragin) {
+      target[key] = oragin[key]
+    }
+    return target
+  }
+  //使用JSON
+  let JSONObject = {
+    "name": "小新",
+    "age": "18",
+    "sex": "man"
+  }
+  document.getElementById('name').innerHTML = JSONObject.name
+  document.getElementById('age').innerHTML = JSONObject.age
+  document.getElementById('sex').innerHTML = JSONObject.sex
+  let sites = [
+    { "name":"教程" , "url":"www.runoob.com" }, 
+    { "name":"google" , "url":"www.google.com" }, 
+    { "name":"微博" , "url":"www.weibo.com" }
+];
+
+console.log(sites[0].name,sites[0].url)
+console.log(sites[1].name,sites[1].url)
+let newJSObject = JSON.parse('{ "name2":"教程" , "url":"www.runoob.com" ,  "name":"google" , "url":"www.google.com" , "name":"微博" , "url":"www.weibo.com" }')
+console.log(newJSObject.name2)
+
+let xmlHttp = new XMLHttpRequest()
+//AJAX
+xmlHttp.open("get","example.php",false)
+const query = "example?name=tom&age=24"
+// let newJSObject = JSON.parse(sites)
+// console.log(newJSObject)
+      // clone(obj2,obj)
+      // console.log(obj2,obj)
+      // obj.school = 'middle first'
+      // console.log(obj,obj2)
+      // let root = document.getElementById('root')
+      // let p = document.createElement('p')
+      // p.innerHTML = (obj2 == obj)
+      // root.appendChild(p)
+      // obj3 = obj2
+      // console.log(obj3 == obj2)
+</script>
+
+</html>

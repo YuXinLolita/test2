@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>callback 回调函数</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    function sendRequest() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // resolve('John Doe')
+                reject('send request error')
+            }, 2000)
+        })
+    }
+
+    async function getUsername() {
+        try {
+           // const username = await sendRequest()
+           let username = await fetch('https://jsonplaceholder.typicode.com/users')
+           username = await username.json()
+           console.log(username)
+            // console.log(username)
+        }
+        catch (message) {
+            console.log(`错误信息是${message}`)
+        }
+    }
+            // let username = getUsername()
+            //getUsername()
+            // console.log(`返回值是--${username}`)
+            getUsername()
+            console.log('离离原上草，一岁一枯荣')
+        // let promise = sendRequest()
+        // promise.then((message)=> {
+        //     console.log(`返回的信息是${message}`)
+        // })
+        //console.log(promise)
+        // let f_promise = fetch('https://jsonplaceholder.typicode.com/users')   //浏览器提供的方法 fetch()
+        // f_promise.then((userdata) => {
+        //   return  userdata.json()
+            //console.log(userdata)
+            //console.log(userdata)
+        // }).then((jsonData) => {
+        //     console.log(jsonData)
+        // })
+        // let toAriport = false
+        // const promise = new Promise((resolve,reject)  => {
+        //     if(toAriport){
+        //         console.log('toAirport is true')
+        //         resolve('this is from reslove')
+        //     }else {
+        //         console.log('toAirport is false')
+        //         reject('this error from reject')
+        //     }
+        // })
+        // promise.then((message) => {
+        //     console.log('resolve is true',message)
+        // }).catch(() => {
+        //     console.log('this is a error')
+        // })
+        // function fun() {
+        //     console.log('润物细无声')
+        // }
+        // console.log(fun,3000)
+        // setTimeout(fun,3000)
+        // console.log('好雨知时节')
+        // console.log('当春乃发生')
+        // console.log('随风潜入夜')
+        // setTimeout((content) => {
+        //     console.log('润物细无声')
+        // },3000)
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box2 {
+    width: 1000px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    /* height: 300px; */
+    overflow: hidden;
+    
+}
+#box2 #list {
+    width: 2000px;
+    position: relative;
+    
+}
+#box2 ul li img{
+    max-width: 100%;
+    width: 190px;
+    margin-right: 10px;
+    float: left; 
+}
+#box2 ul li{
+    list-style-type:none; 
+}

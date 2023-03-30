@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.news {
+    width: 500px;
+    margin: 0 auto;
+    color: crimson;
+    height: 500px;
+    background-image:linear-gradient(to bottom,navy,#de6eee, tomato);
+}
+#btn{
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+}
+ #list li{
+list-style-type: none;
+ }
+ #para{
+    list-style-type: none;
+    width: 50px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    margin-top: -50px;
+    
+    right: 20px;
+    background-color: #de6eee;
+ }
+ #para li {
+    background-color: #e6e;
+    cursor: pointer;
+ }
+ body{
+    background-image: url("../image/04C3F754290FD33EFC6E90C3B0952EE0.jpg");
+ }

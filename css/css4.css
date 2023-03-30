@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+#box2 {
+    width:190px;
+    border:1px solid #de6eee;
+    margin:50px auto;
+    position: relative;
+}
+#box2 #list{
+   
+    height: 280px;
+    list-style: none;
+
+    position: relative;
+}
+#box2 #list li {
+    top: 0;
+    left: 0;
+position: absolute;
+    width: 190px;
+    margin-right: 10px;
+    transition:opacity 1s ease 0s;
+    opacity: 0;
+}
+#box2 #list li:first-child{
+    opacity: 1;
+}
+#box2 #list li img {
+    max-width: 100%;
+}
+#box2 .btn{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    background-color: #de6;
+    border-radius: 50%;
+}
+#box2 #btnLeft{
+    left: 10px;
+}
+#box2 #btnRight{
+    right: 10px;
+}

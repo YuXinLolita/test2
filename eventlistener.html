@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box2{
+            width: 500px;
+            height: 500px;
+           border: 1px solid #000;
+           padding: 50px;
+           border-radius: 50%;
+            margin: 50px auto;
+        }
+        #box3{
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            border-radius: 50%;
+            border: 1px solid #000;
+        }
+        #box4{
+            width: 300px;
+            height: 300px;
+            padding: 50px;
+            border-radius: 50%;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="box2">
+        <div id="box3">
+            <div id="box4"></div>
+        </div>
+    </div>
+    <script>
+        // const vnode  = {
+        //     tag:"div",
+        //     onclick:()=>{
+        //         alert("hallo");
+        //     },
+        //     children:"click me"
+        // }
+        // function render(vnode,container){
+        //     const el = document.createElement(vnode.tag);
+        //     if(typeof vnode.children ==="string"){
+        //         const text = document.createTextNode(vnode.children);
+        //         el.appendChild(text);
+        //     }
+        //     console.log(el);
+        //     container.appendChild(el);
+        // }
+        // render(vnode,document.body);
+
+
+        let box2 = document.getElementById("box2");
+        let box3 = document.getElementById("box3");
+        let box4 = document.getElementById("box4");
+        // box2.onclick = function(){
+        //     // alert("我是onClick,box2");
+        //     console.log("我是onClick,box2");
+        // }
+        // box3.onclick = function(){
+        //     // alert("我是onClick,box3");
+        //     console.log("我是onClick,box3");
+        // }
+        // box4.onclick = function(){
+        //     // alert("我是onClick,box4");
+        //     console.log("我是onClick,box4");
+        // }
+        box2.addEventListener("click",function(){
+            console.log("我是捕获函数，box2");
+        },true)
+        box3.addEventListener("click",function(){
+            console.log("我是捕获函数，box3"),TransformStreamDefaultController;
+        },true)
+        box4.addEventListener("click",function(){
+            console.log("我是捕获函数，box4");
+        },true)
+        box2.onclick = function(){
+            console.log("我是冒泡阶段，box2")
+        }
+        box3.onclick = function(){
+            console.log("我是冒泡阶段，box3");
+        }
+        box4.onclick = function(){
+            console.log("我是冒泡阶段，box4")
+        }
+    </script>
+</body>
+</html>

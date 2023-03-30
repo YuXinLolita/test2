@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const vnode = {
+            tag:"div",
+            props:{
+                onclick:()=>{
+                    alert("hallo");
+                }
+            },
+            children:"Click me!"
+        }
+        function render(vnode,container){
+            const el = document.createElement(vnode.tag)
+           for(const prop in vnode.props){
+            if(/^on/.test(prop)){
+                el.addEventListener(prop.slice(2).toLowerCase(),vnode.props[prop]);
+            }
+           }
+            if(typeof vnode.children === "string"){
+                const text = document.createTextNode(vnode.children);
+                el.appendChild(text);
+            }
+            container.appendChild(el);
+        }
+        render(vnode,document.body);
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box2 {
+    width: 650px;
+    height: 360px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    
+}
+#box2 #list {
+    width: 4000px;
+    height: 360px;
+    list-style-type: none;
+    left: 0px;
+    transition: left .5s ease 0s;
+    position: relative;
+    /* left: 0px; */
+}
+/* #box2 #list img{
+    max-width: 100%;
+    width: 650px;
+    height: 330px;
+} */
+#box2 #list li{
+    float: left;  
+}
+#box2 .button{
+    position:absolute;
+    top:50%;
+margin-top:-25px;
+background-color: #de6eee;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+}
+#box2 #btn-left{
+    left: 25px;
+}
+#box2 #btn-right{
+right: 25px;
+
+}
