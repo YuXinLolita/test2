@@ -47,4 +47,33 @@
 
 ## 订单】
 
-具有特殊性，待定
+```js
+{
+    username'YuXin',
+    _id:'xxx,
+    shipId:'商店的id',
+    shopName:'沃尔玛'，
+    isCanceld:false, //订单是否被取消
+
+    address:
+    {  "username": "许曼语New",
+  "city": "东京",
+  "department": "真境花园",
+  "houseNumber": "门牌号2",
+  "name": "XuManyu",
+  "phone": "13234567890",
+  },
+  products:[
+    product:{
+    "shopId": "64268416d3c6ad2a1662bf15",
+  "name": "葡萄",
+  "imgUrl": "/images/product/grape.jpg",
+  "sales": 100,
+  "price": 33,
+  "oldPrice": 36,
+    },
+    orderSales:3
+  ]
+
+}
+```

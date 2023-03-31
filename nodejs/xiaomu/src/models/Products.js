@@ -16,5 +16,5 @@ const Schema = mongoose.Schema({
     oldPrice:Number,
     tabs:[String] //示例： tabs:['all','seckill']
 },{timestamps:true})
-const Product = mongoose.schema('product',Schema)
+const Product = mongoose.model('product',Schema)
 module.exports = Product

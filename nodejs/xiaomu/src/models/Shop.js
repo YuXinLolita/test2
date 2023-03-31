@@ -3,8 +3,8 @@
  * @author 欣欣
  */
 
-const mongoose = requrie('../db/db')
-const schema = mongoose.Schema({
+const mongoose = require('../db/db')
+const Schema = mongoose.Schema({
     name:String,
     imgUrl:String,
     sales:Number,
@@ -16,5 +16,5 @@ const schema = mongoose.Schema({
     slogan:String
 
 },{timestamps:true})
-const shop = mongoose.Schema('shop',schema)
+const shop = mongoose.model('shop',Schema)
 module.exports = shop
