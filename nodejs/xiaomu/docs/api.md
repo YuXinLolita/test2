@@ -65,6 +65,23 @@ response body
     message:'errno !== 0 的话，错误信息
 }
 ```
+## 获取用户信息
+## url
+`/api/user/info`
+### method
+`get`
+### request body
+无
+### response body
+```js
+{
+    errno:0,
+    data:{
+        username:'xxxx',
+    }
+    message:'errno !-- 0 的话错误信息'
+}
+```
 ## 地址管理
 ### url 
 `/api/user/address`
